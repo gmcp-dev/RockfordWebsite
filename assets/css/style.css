@@ -1,0 +1,577 @@
+:root {
+    --primary-color: #f4ca59;
+    --secondary-color: #131e25;
+    --third-color: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.r-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 
+* ------------------------
+*   Sections
+* ------------------------
+*/
+section {
+    background-color: var(--secondary-color);
+    padding: 75px 0;
+    overflow: hidden;
+}
+section:empty {
+    display: none;
+}
+section .section-category {
+    font-size: 0.9em;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+section .section-info {
+    font-size: 2em;
+    color: white;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+section .separator {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    margin: auto;
+
+    position: relative;
+}
+section .separator .line {
+    height: 2px;
+    width: 50px;
+    background-color: rgb(244, 202, 89);
+}
+section .separator .lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2px;
+}
+section .separator .lines .small-line {
+    width: 16px;
+    height: 2px;
+    background-color: rgb(244, 202, 89);
+}
+
+/* 
+* ------------------------
+*   1. Preloader
+* ------------------------
+*/
+.preloader {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--third-color);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+.preloader .loader {
+    color: var(--primary-color);
+    font-size: 3em;
+    font-weight: 400;
+}
+.preloader .loader i.fa-spin {
+    animation-duration: 0.5s;
+}
+
+/* 
+* ------------------------
+*   3. Main nav
+* ------------------------
+*/
+#main-nav {
+    width: 100%;
+    height: 90px;
+    padding: 15px 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#main-nav .r-container {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+#main-nav .logo {
+    width: 60px;
+    overflow: hidden;
+}
+#main-nav .logo img {
+    width: 100%;
+}
+#main-nav .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    list-style: none;
+    margin: 0;
+}
+#main-nav .nav-links li a {
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: var(--primary-color);
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+#main-nav .nav-links li:hover a {
+    color: var(--third-color);
+}
+#main-nav .toggle-submenu {
+    display: none;
+    width: max-content;
+
+    border: 1px solid var(--third-color);
+    padding: 5px 10px;
+}
+
+
+/* 
+* ------------------------
+*   2. Front-page section
+* ------------------------
+*/
+#front-page {
+    width: 100%;
+    height: 100vh; max-height: 700px;
+    
+    background-color: var(--third-color);
+    background: url(../images/bg0.png) no-repeat center 0 / cover;
+
+    position: relative;
+    overflow: hidden;
+}
+#front-page .character {
+    opacity: 0.9;
+    height: 600px;
+    position: absolute;
+    overflow: hidden;
+}
+#front-page .character:nth-of-type(1) {
+    bottom: -5%;
+    left: 10%;
+}
+#front-page .character:nth-of-type(2) {
+    bottom: -5%;
+    right: 5%;
+    transform: rotateY(180deg);
+}
+
+#front-page .r-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#front-page h2 {
+    font-family: inherit;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+#front-page h1 {
+    font-family: inherit;
+    font-size: 3.5em;
+    color: var(--primary-color);
+}
+#front-page p {
+    font-family: inherit;
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.5rem;
+
+    margin-top: 20px;
+}
+#front-page .btn {
+    background-color: rgba(19, 30, 37, 0.5);
+
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    color: var(--primary-color);
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: solid 2px var(--primary-color);
+    border-radius: 0;
+
+    transition: all 0.3s ease-in-out;
+}
+#front-page .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+/* 
+* ------------------------
+*   3. About game
+* ------------------------
+*/
+#about-game .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+
+    color: var(--secondary-color);
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: solid 2px transparent;
+    border-radius: 0;
+
+    transition: all 0.3s ease-in-out;
+}
+#about-game .btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+#about-game .video-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about-game .video-preview iframe {
+    width: 100%; max-width: 560px;
+    max-height: 315px;
+}
+
+/* 
+* ------------------------
+*   4. Games activities
+* ------------------------
+*/
+#game-activities .owl-carousel .owl-wrapper {
+    padding: 10px 0;
+}
+#game-activities .owl-carousel .item {
+    margin: 0 5px;
+
+    border: solid 2px var(--third-color);
+}
+#game-activities .owl-carousel .item .content {
+    position: relative;
+}
+#game-activities .owl-carousel .item .content .content-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    padding: 5px 10px;
+}
+#game-activities .owl-carousel .item .content .content-name .icon {
+    width: 40px;
+    height: 40px;
+}
+#game-activities .owl-carousel .item .content .preview {
+    width: 100%;
+    height: 100%;
+    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+#game-activities .owl-carousel .item .content .overlay {
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#game-activities .owl-carousel .item .content .overlay .job-content {
+    position: relative;
+    padding: 20px;
+    color: white;
+}
+#game-activities .owl-carousel .item .content .overlay .job-content p {
+    margin: 0;
+}
+#game-activities .owl-carousel .item .content .overlay .job-content .text {
+    font-size: 26px;
+    color: white;
+    font-weight: 600;
+    margin-top: 10px;
+}
+#game-activities .owl-carousel .item .content .overlay .job-content .text span {
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#game-activities .owl-carousel .item .content .overlay .job-content .level-info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+#game-activities .owl-carousel .item .content .overlay .job-content .level-info span {
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* 
+* ------------------------
+*   7. Vehicle suggestion
+* ------------------------
+*/
+.vehicles-suggest {
+    background: url(../images/bg3.webp) no-repeat fixed center center / cover;
+    padding: 0;
+}
+.vehicles-suggest .overlay {
+    background-color: rgba(244, 203, 89, 0.8);
+    padding: 20px 0;
+}
+.vehicles-suggest .section-category {
+    color: black;
+}
+.vehicles-suggest .separator .line {
+    height: 2px;
+    width: 50px;
+    background-color: var(--secondary-color);
+}
+.vehicles-suggest .separator .lines .small-line {
+    width: 16px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+.vehicles-suggest .owl-carousel .item {
+    border: 1px var(--third-color) solid;
+    margin: 0 5px;
+}
+.vehicles-suggest .owl-carousel .item img {
+    display: block;
+    width: 100%;
+}
+
+/* 
+* ------------------------
+*   8. Forum guides
+* ------------------------
+*/
+.forum-guides [class^="col-"] {
+    padding-top: 25px;
+}
+.forum-guides .post {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 35px 20px;
+    border: 1px solid var(--third-color);
+
+    text-decoration: none;
+    color: white;
+
+    position: relative;
+    transition: all 0.5s ease;
+}
+.forum-guides .post:hover {
+    border-color: var(--primary-color);
+}
+.forum-guides .post .tag {
+    width: max-content;
+
+    margin: 15px auto 0 auto;
+    padding: 5px 10px;
+    border: 1px solid var(--primary-color);
+
+    font-weight: 600;
+}
+.forum-guides .post .title {
+    margin: 30px 0 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.forum-guides .post .btn {
+    width: 100%;
+    display: block;
+    background-color: var(--primary-color);
+
+    padding: 10px 20px;
+    
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: solid 2px transparent;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 
+* ------------------------
+*   9. Top-control
+* ------------------------
+*/
+#top-control {
+    width: max-content;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--primary-color);
+
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    padding: 15px;
+
+    font-size: 18px;
+    color: var(--secondary-color);
+
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+/* 
+* ------------------------
+*   10. Footer
+* ------------------------
+*/
+footer {
+    background-color: #f4ca59;
+    padding: 10px 0;
+    color: black;
+}
+
+
+@media screen and (max-width: 1440px) {
+    #front-page .character:nth-of-type(1) {
+        left: 1%
+    }
+    #front-page .character:nth-of-type(2) {
+        right: -5%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #front-page {
+        padding: 0;
+    }
+    #front-page .character {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #main-nav .nav-links {
+        display: none;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        gap: 0;
+
+        text-align: center;
+
+        padding: 0;
+        position: absolute;
+        top: 85%;
+        right: 20px;
+        z-index: 99;
+    }
+    #main-nav .nav-links li {
+        width: 100%;
+        padding: 5px 10px;
+
+        transition: all 0.5s ease;
+    }
+    #main-nav .nav-links li:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    #main-nav .toggle-submenu {
+        display: block;
+    }
+    #main-nav .toggle-submenu:hover + .nav-links,
+    #main-nav .nav-links:hover {
+        display: flex !important;
+    }
+}
+
+@media screen and (max-height: 720px) {
+    #front-page {
+        max-height: 720px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #main-nav .nav-links {
+        width: 100%;
+        top: 115%;
+        right: 0;
+    }
+}
