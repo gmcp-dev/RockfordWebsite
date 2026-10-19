@@ -1,28 +1,27 @@
 # Rockford Website
 
-Sitio web oficial de **Rockford**, un servidor multijugador alternativo de **GTA V**.
-Desarrollado por [gmcp-dev](https://github.com/gmcp-dev) a petición de [Rockford.is](https://rockford.is).
+Official website of **Rockford**, an alternative multiplayer server for **GTA V**.
+Built by [gmcp-dev](https://github.com/gmcp-dev) on request of [Rockford.is](https://rockford.is).
 
-## Descripción
+## Description
 
-Rockford es un servidor multijugador alternativo para GTA V donde los jugadores pueden
-disfrutar de una experiencia única y personalizada, con una comunidad activa y eventos
-regulares. Este repositorio contiene el código fuente de la página web del proyecto:
-landing page, presentación de actividades y empleos del servidor, vehículos exclusivos
-y guías útiles para la comunidad.
+Rockford is an alternative multiplayer server for GTA V where players can enjoy a unique
+and personalized experience, with an active community and regular events. This repository
+contains the source code of the project's website: landing page, presentation of the
+server's activities and jobs, exclusive vehicles, and useful guides for the community.
 
-## Características
+## Features
 
-- Página de inicio con presentación del servidor.
-- Sección "Sobre el juego" con video de presentación.
-- Carrusel de actividades y empleos (camionero, ladrón, armero, mecánico, policía,
-  granjero, basurero) con nivel requerido.
-- Galería de vehículos exclusivos con lightbox.
-- Guías útiles de la comunidad (voice chat, rol, juego).
-- Navbar fija con animaciones y botón de volver arriba.
-- Diseño responsive basado en Bootstrap 5.
+- Home page introducing the server.
+- "About the game" section with a presentation video.
+- Carousel of activities and jobs (trucker, robber, gunsmith, mechanic, police,
+  farmer, garbage collector) with required level.
+- Exclusive vehicles gallery with lightbox.
+- Useful community guides (voice chat, roleplay, gameplay).
+- Fixed navbar with animations and back-to-top button.
+- Responsive design based on Bootstrap 5.
 
-## Tecnologías
+## Technologies
 
 - HTML5 / CSS3
 - [Bootstrap 5](https://getbootstrap.com/)
@@ -32,58 +31,58 @@ y guías útiles para la comunidad.
 - [WOW.js](https://wowjs.uk/) + [Animate.css](https://animate.style/)
 - [Font Awesome](https://fontawesome.com/)
 
-## Estructura del proyecto
+## Project structure
 
 ```
 RockfordWebsite/
 ├── index.html
 ├── favicon.ico
 ├── assets/
-│   ├── css/        # Estilos (Bootstrap, Owl, Lightbox, FontAwesome, style.css)
+│   ├── css/        # Styles (Bootstrap, Owl, Lightbox, FontAwesome, style.css)
 │   ├── js/         # Scripts (jQuery, Owl, Lightbox, WOW, index.js)
-│   ├── fonts/      # Fuentes (Font Awesome)
-│   └── images/     # Imágenes y recursos gráficos
+│   ├── fonts/      # Fonts (Font Awesome)
+│   └── images/     # Images and graphic assets
 ├── package.json
-└── node_modules/   # Dependencias (ignoradas en git)
+└── node_modules/   # Dependencies (ignored by git)
 ```
 
-## Uso local
+## Local usage
 
-No se requiere compilación. Basta con abrir `index.html` en un navegador o servir la
-carpeta con cualquier servidor estático:
+No build step is required. Just open `index.html` in a browser or serve the folder
+with any static server:
 
 ```bash
-# Ejemplo con Python
+# Example with Python
 python -m http.server 8000
 
-# Ejemplo con Node (npx)
+# Example with Node (npx)
 npx serve .
 ```
 
-Luego abre `http://localhost:8000` en tu navegador.
+Then open `http://localhost:8000` in your browser.
 
-## Desarrollo
+## Development
 
-Las dependencias listadas en `package.json` se instalan con:
+The dependencies listed in `package.json` can be installed with:
 
 ```bash
 npm install
 ```
 
-> Nota: los archivos de terceros (Bootstrap, jQuery, etc.) ya se incluyen en
-> `assets/`, por lo que la instalación es opcional para desarrollo local.
+> Note: third-party files (Bootstrap, jQuery, etc.) are already included in `assets/`,
+> so installation is optional for local development.
 
-## Contribuir
+## Contributing
 
-Las contribuciones son bienvenidas. Revisa [CONTRIBUTING.md](CONTRIBUTING.md) para
-conocer el flujo de trabajo, las convenciones de código y cómo enviar un pull request.
+Contributions are welcome. Check [CONTRIBUTING.md](CONTRIBUTING.md) to learn about the
+workflow, code conventions, and how to submit a pull request.
 
-## Licencia
+## License
 
-Este proyecto se distribuye bajo la licencia [MIT](LICENSE).
+This project is distributed under the [MIT](LICENSE) license.
 
-## Aviso
+## Disclaimer
 
-Grand Theft Auto y Grand Theft Auto V son marcas registradas de Take-Two Interactive
-Software. Este proyecto no está afiliado ni respaldado por Take-Two Interactive Software.
-Todo el contenido generado por los usuarios pertenece a sus respectivos propietarios.
+Grand Theft Auto and Grand Theft Auto V are registered trademarks of Take-Two
+Interactive Software. This project is not affiliated with or endorsed by Take-Two
+Interactive Software. All user-generated content belongs to its respective owners.
